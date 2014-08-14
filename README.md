@@ -3,11 +3,15 @@ Imuless
 
 A way to integrate the http://lesscss.org/ NodeJs compiler into Umbraco Themeing.
 
-Create themes the usual way with Less syntax.
+ - Create themes the usual way with Less syntax.
+ - Use a property editor to expose override Less variables.
+ - On publish of the node with the Imuless property editor, the NodeJs lessc process runs.
+ - Supports multisite setups.
 
-Use a property editor to expose override Less variables.
+### File Structure
 
-On publish of the node with the Imuless property editor, the NodeJs lessc process runs.
+Example Less file structure:
+
 
 ### Configurable items in the web.config
 
