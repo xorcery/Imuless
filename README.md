@@ -18,7 +18,7 @@ A way to integrate the http://lesscss.org/ NodeJs compiler into Umbraco Themeing
 This is a raw new package and is therefore not installable via the usual channels (NuGet/Umbraco Package).
 
 To manually install:
-- Build the solution and drop in your bin.  You may also simply download the current release DLL.
+- Build the solution and drop in your bin.  You may also simply download the current release [DLL](https://github.com/imulus/Imuless/releases).
 - Add an `Imuless` folder to your `App_Plugins`.  Then drop in the property editor contents (css, js, views, manifest).
 - Ensure you add all web.config options described below.
 - Configure your `imulus.config.js` file in the newly created `Imuless` folder.  Make sure to name your JSON alias exactly like your Less vars.
