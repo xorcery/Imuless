@@ -39,6 +39,10 @@
     }
 
     var initTempVars = function () {
+        if(!$scope.model.value.vars) {
+            $scope.model.value.vars = [];
+         }
+
         for (var i in $scope.model.value.vars) {
 
             if (!$scope.model.value.vars[i]) {
@@ -53,5 +57,22 @@
     var init = function () {
         $scope.setThemeConfig();
         initTempVars();
+    }
+});
+
+angular.module("umbraco.directives").directive('imulessColorPicker', function() {
+    var linker = function (scope, element, attrs) {
+
+        element.colorpicker({ format: "hex" }).on('changeColor', function (ev) {
+            //console.log(scope);
+            //element.val(ev.color.toHex());
+            element.trigger('input');
+        });;
+    };
+
+    return {
+        restrict: "A",
+        replace: false,
+        link: linker
     }
 });

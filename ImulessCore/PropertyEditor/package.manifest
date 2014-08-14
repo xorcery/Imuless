@@ -13,9 +13,11 @@
     }
   ],
   "css": [
+    "~/App_Plugins/Imuless/ColorPicker/css/bootstrap-colorpicker.min.css",
     "~/App_Plugins/Imuless/css/imuless.css"
   ],
   "javascript": [
+    "~/App_Plugins/Imuless/ColorPicker/js/bootstrap-colorpicker.min.js",
     "~/App_Plugins/Imuless/js/imuless.js"
   ]
 }
