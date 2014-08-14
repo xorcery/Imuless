@@ -1,0 +1,14 @@
+﻿<div class="imuless" ng-controller="ImulessController">
+    <div class="theme">
+        <label>Select</label>
+        <select ng-model="model.value.theme" ng-options="theme.name as theme.name for theme in model.config.themes" ng-change="clearTheme();setThemeConfig();"></select>
+    </div>
+    <div class="vars" ng-show="selectedTheme.vars.length > 0">
+        <ul ng-repeat="var_property in selectedTheme.vars">
+            <li>
+                <label>{{var_property.name}}<small>{{var_property.description}}</small></label>
+                <input type="text" ng-model="tempVars[$index]" ng-change="updateVarModel($index, var_property.alias)" />
+            </li>
+        </ul>
+    </div>
+</div>

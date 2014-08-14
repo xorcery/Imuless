@@ -1,0 +1,22 @@
+﻿{
+  "propertyEditors": [
+    {
+      "name": "Imuless",
+      "alias": "Imulus.Imuless",
+      "editor": {
+        "valueType": "JSON",
+        "view": "~/App_Plugins/Imuless/views/imuless.html"
+      },
+      "prevalues": {
+        
+      }
+    }
+  ],
+  "css": [
+    "~/App_Plugins/Imuless/css/imuless.css"
+  ],
+  "javascript": [
+    "~/App_Plugins/Imuless/js/imuless.js"
+  ]
+}
+

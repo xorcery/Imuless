@@ -1,0 +1,25 @@
+﻿.imuless {
+
+}
+
+.imuless ul {
+    list-style: none;
+    margin: 0;
+}
+
+.imuless .theme {
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.imuless .vars {
+    border: 1px solid #666;
+    padding: 10px;
+    width: 400px;
+    background-color: #eee;
+}
+
+.imuless label {
+    width: 150px;
+}
+
