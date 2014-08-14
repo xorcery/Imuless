@@ -19,6 +19,9 @@ To manually install:
 - Configure your `imulus.config.js` file in the newly created `Imuless` folder.  Make sure to name your JSON alias exactly like your Less vars.
 - Add `<link>` tag that points to `/css/<currentDomain>.css`.
 - Setup your Less file structure as described below.
+- Ensure you have Node.js installed on your server.
+- Install Less `npm install -g less`.
+- You will need to take note of where the `lessc.cmd` is installed on your server as you'll need to point to this in the web.confg.  It is also important make sure that file can be executed by the web process (i.e. permissions).
 
 ### File Structure
 
@@ -46,7 +49,7 @@ The folder `Domain Vars` holds the overrided variables and will be included at t
 
 The Property Editor is configured via JSON and exposes certain variables to your themes.  You may expose several or no variables for editing.
 
-A sample configuration would look like this:
+A sample configuration (`/App_Plugins/Imuless/js/imuless.config.js`) would look like this:
 
     [
         {
