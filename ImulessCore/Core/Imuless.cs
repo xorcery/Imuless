@@ -54,8 +54,9 @@ namespace Imuless.Core
 
                 //write an override file
                 var overrideFilePath = context.Server.MapPath(workingDirectory + "/" + varsDirectory + "/" + domain + ".less");
+
                 File.WriteAllText(overrideFilePath, GetOverrideVariables(imulessModel), Encoding.UTF8);
-             
+
                 //get selected theme application.less file
                 
                 if (File.Exists(themeFilePath))
@@ -91,6 +92,11 @@ namespace Imuless.Core
 
         private static string GetOverrideVariables(ImulessModel model)
         {
+            if (model == null)
+            {
+                return "";
+            }
+
             if (!model.Vars.Any())
             {
                 return "";
@@ -100,7 +106,7 @@ namespace Imuless.Core
 
             foreach (var _var in model.Vars)
             {
-                if (!string.IsNullOrWhiteSpace(_var.Alias) && !string.IsNullOrWhiteSpace(_var.Value))
+                if (_var != null && !string.IsNullOrWhiteSpace(_var.Alias) && !string.IsNullOrWhiteSpace(_var.Value))
                 {
                     sb.AppendFormat(@"@{0}: {1};" + Environment.NewLine, _var.Alias, _var.Value);
                 }

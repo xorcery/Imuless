@@ -40,6 +40,11 @@
 
     var initTempVars = function () {
         for (var i in $scope.model.value.vars) {
+
+            if (!$scope.model.value.vars[i]) {
+                $scope.model.value.vars[i].value = "";
+            }
+
             $scope.tempVars.push($scope.model.value.vars[i].value);
         }
     }
