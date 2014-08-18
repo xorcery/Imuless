@@ -129,8 +129,15 @@ namespace Imuless.Core
             {
                 var process = new Process();
 
+                var minifyFlag = "";
+
+                if (ConfigurationManager.AppSettings["imuless:minify"] == "true")
+                {
+                    minifyFlag = "-x";
+                }
+
                 process.StartInfo.FileName = ConfigurationManager.AppSettings["imuless:pathToLessc"];
-                process.StartInfo.Arguments = string.Format("\"{0}\" > \"{1}\"", inputFilePath, outputFilePath);
+                process.StartInfo.Arguments = string.Format("\"{0}\" > \"{1}\" {2}", inputFilePath, outputFilePath, minifyFlag);
 
                 Debugger(process.StartInfo.Arguments);
 

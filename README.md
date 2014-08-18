@@ -47,6 +47,7 @@ The folder `Domain Vars` holds the overrided variables and will be included at t
     <add key="imuless:outputDirectory" value="~/css"/>
     <add key="imuless:domainVarsDirectory" value="Domain Vars"/>
     <add key="imuless:rootLessFile" value="application.less"/>
+    <add key="imuless:minify" value="true"/>
     <add key="imuless:pathToLessc" value="<serverPathToLess>/lessc.cmd"/>
 
 
