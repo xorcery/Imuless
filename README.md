@@ -18,7 +18,7 @@ A way to integrate the http://lesscss.org/ NodeJs compiler into Umbraco Themeing
 This is a raw new package and is therefore not installable via the usual channels (NuGet/Umbraco Package).
 
 To manually install:
-- Build the solution and drop in your bin.  You may also simply download the current release DLL.
+- Build the solution and drop in your bin.  You may also simply download the current release [DLL](https://github.com/imulus/Imuless/releases).
 - Add an `Imuless` folder to your `App_Plugins`.  Then drop in the property editor contents (css, js, views, manifest).
 - Ensure you add all web.config options described below.
 - Configure your `imulus.config.js` file in the newly created `Imuless` folder.  Make sure to name your JSON alias exactly like your Less vars.
@@ -61,10 +61,10 @@ A sample configuration (`/App_Plugins/Imuless/js/imuless.config.js`) would look 
         {
             "name": "Theme 1",
             "vars": [
-                { "alias": "brand-info", "name": "Brand Info Color", "description": "Enter a hex value beginning with a '#'."},
-                { "alias": "brand-primary", "name": "Brand Primary Color", "description": "Enter a hex value beginning with a '#'." },
-                { "alias": "brand-success", "name": "Brand Success", "description": "Enter a hex value beginning with a '#'." },
-                { "alias": "link-color", "name": "Link Color", "description": "Enter a hex value beginning with a '#'." }
+                { "alias": "brand-info", "name": "Brand Info Color", "description": "Enter a hex value beginning with a '#'.", "type": "color"},
+                { "alias": "brand-primary", "name": "Brand Primary Color", "description": "Enter a hex value beginning with a '#'.", "type": "color" },
+                { "alias": "brand-success", "name": "Brand Success", "description": "Enter a hex value beginning with a '#'.", "type": "color" },
+                { "alias": "link-color", "name": "Link Color", "description": "Enter a hex value beginning with a '#'.", "type": "color" }
             ]
         },
         {
