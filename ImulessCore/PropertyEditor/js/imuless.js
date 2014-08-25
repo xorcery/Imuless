@@ -25,8 +25,6 @@
 
     $scope.setThemeConfig = function () {
         $scope.selectedTheme = getThemeConfig();
-
-        //console.log($scope.model.value);
     }
 
     $scope.clearTheme = function () {
@@ -39,14 +37,15 @@
     }
 
     var initTempVars = function () {
-        if(!$scope.model.value.vars) {
+
+        if (!$scope.model.value.vars) {
             $scope.model.value.vars = [];
-         }
+        }
 
         for (var i in $scope.model.value.vars) {
 
             if (!$scope.model.value.vars[i]) {
-                $scope.model.value.vars[i].value = "";
+                $scope.model.value.vars[i] = { value: "" };
             }
 
             $scope.tempVars.push($scope.model.value.vars[i].value);
@@ -60,7 +59,7 @@
     }
 });
 
-angular.module("umbraco.directives").directive('imulessColorPicker', function() {
+angular.module("umbraco.directives").directive('imulessColorPicker', function () {
     var linker = function (scope, element, attrs) {
 
         element.colorpicker({ format: "hex" }).on('changeColor', function (ev) {
