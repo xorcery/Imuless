@@ -142,9 +142,15 @@ namespace Imuless.Core
                 Debugger(process.StartInfo.Arguments);
 
                 process.StartInfo.RedirectStandardOutput = false;
-                process.StartInfo.UseShellExecute = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardError = true;
 
                 process.Start();
+
+                var error = process.StandardError.ReadToEnd();
+                process.WaitForExit();
+
+                LogHelper.Info<ImulessModel>(error);
             }
             catch (Exception ex)
             {
